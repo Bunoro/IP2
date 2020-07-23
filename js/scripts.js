@@ -51,7 +51,7 @@ function compute(event) {
     var dayName = akanNames[dayOfTheWeek[dateBorn]][gender];
         console.log(dayName);
     
-    if (gender==="male" && year>=1800 && month>=1 && month<13 && day>=1 && day<32){
+    if (gender==="male" && year>=1800 && month>=1 && month<=12 && day>=1 && day<=31){
         alert("On this day of  " + dayOfTheWeek[date.getDay()]+ " " + "you were born and your Akan name is " + dayName);
     }
     else if (gender==="female" && year>=1800 && month>=1 && month<=12 && day>=1 && day<=31){
