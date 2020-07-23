@@ -17,35 +17,44 @@
 
     </div>
 
-    <form class="myForm" onsubmit="return getAkanName()">
-        <label for="year-of-birth">
-            year:
-            <input type="number" name="year-of-birth" id="year-input" placeholder="YYYY" value="required">
-        </label>
+    <div class="container">
+        <label>Input date of birth below</label>
+        <form class="myForm" onsubmit="return getAkanName()">
+            <label for="year-of-birth">
+                year:
+                <input type="number" name="year-of-birth" id="year-input" placeholder="YYYY" value="required">
+            </label>
+    
+            <label for="month-of-birth">
+                month:
+                <input type="number" name="month-of-birth" id="month-input" placeholder="MM" value="required">
+            </label>
+    
+            <label for="date-of-birth">
+                date:
+                <input type="number" name="date-of-birth" id="date-input" placeholder="DD" value="required">
+            </label>
+            <br>
+            <label for="gender">
+                male:
+                <input type="radio" name="gender" id="male-input" value="male" required>
+                Female:
+                <input type="radio" name="gender" id="female-input" value="female" required>
+            </label>
+            <br><br>
+    
+        </form>
+    
+        <form onsubmit="return clearInput()">
+            <input class="clear" type="submit" value="clearInput">
+    
+        </form>
+    
 
-        <label for="month-of-birth">
-            month:
-            <input type="number" name="month-of-birth" id="month-input" placeholder="MM" value="required">
-        </label>
+    </div>
 
-        <label for="date-of-birth">
-            date:
-            <input type="number" name="date-of-birth" id="date-input" placeholder="DD" value="required">
-        </label>
-        <br>
-        <label for="gender">
-            male:
-            <input type="radio" name="gender" id="male-input" value="male" required>
-            Female:
-            <input type="radio" name="gender" id="female-input" value="female" required>
-        </label>
-        <br><br>
 
-    </form>
 
-    <form onsubmit="return clearInput()">
-
-    </form>
     
 </body>
 </html>
