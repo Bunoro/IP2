@@ -53,4 +53,42 @@ let dayTrue = dayValidator();
 let dayOfWeekNumber = Math.floor((((Number(yearOfBirth.slice(0,2))/4)-2*Number(yearOfBirth.slice(0,2))-1)+
             ((5*Number(yearOfBirth.slice(2,4))/4))+((26*(monthOfBirth+1)/10))+dateOfBirth)%7);
  
-//akan name arrays
+//days of the week and akan name arrays
+let daysOfWeek = [
+    "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+];
+
+let maleAkanNames = [
+    "Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"
+];
+
+let femaleAkanNames = [
+    "Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"
+];
+
+//fixing bug for dayOfWeek and number indexing
+let index;
+if dayOfWeekNumber == 0 {
+    index == 6;
+}else {
+    dayOfWeekNumber - 1;
+}
+console.log(index);
+
+
+if (myGenderValue=="male" && monthTrue && dayTrue) {
+    document.getElementById('result').textContent = "You were born on a " + dayOfWeek[index] + ",your Akan name is " + maleAkanNames[index];
+    document.getElementById('display-name').textContent = "You are...";
+    document.getElementById('result').style.fontSize = "20px";
+    
+    return false;
+}else if (myGenderValue=="female" && monthTrue && dayTrue) {
+    document.getElementById('result').textContent = "You were born on a " + dayOfWeek[index] + ",your Akan name is " + femaleAkanNames[index];
+    document.getElementById('display-name').textContent = "You are...";
+    document.getElementById('result').style.fontSize = "20px";
+
+    return false;
+
+}else {
+    alert("You entered an invalid date or month. Please try again!");
+}
