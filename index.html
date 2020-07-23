@@ -14,8 +14,38 @@
         <h2>What is Akan Name Generator?</h2>
         <p>The Akan name gennerator is an application that simply identifies a person's gender and the date they were born and in turn generates their Akan name which originates from Ghana.</p>
         <p>In order to do this, input your birth details and select your gender below and on click submit to get your Akan name.</p>
-        
+
     </div>
+
+    <form class="myForm" onsubmit="return getAkanName()">
+        <label for="year-of-birth">
+            year:
+            <input type="number" name="year-of-birth" id="year-input" placeholder="YYYY" value="required">
+        </label>
+
+        <label for="month-of-birth">
+            month:
+            <input type="number" name="month-of-birth" id="month-input" placeholder="MM" value="required">
+        </label>
+
+        <label for="date-of-birth">
+            date:
+            <input type="number" name="date-of-birth" id="date-input" placeholder="DD" value="required">
+        </label>
+        <br>
+        <label for="gender">
+            male:
+            <input type="radio" name="gender" id="male-input" value="male" required>
+            Female:
+            <input type="radio" name="gender" id="female-input" value="female" required>
+        </label>
+        <br><br>
+
+    </form>
+
+    <form onsubmit="return clearInput()">
+
+    </form>
     
 </body>
 </html>
