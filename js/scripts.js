@@ -29,11 +29,11 @@ function monthValidator(params) {
 
 function dayValidator(params) {
     if (monthOfBirth===2 && Number(yearOfBirth)%4===0) {
-        if (dayOfBirth>28 || dayOfBirth<1) {
+        if (dayOfBirth>28 || dateOfBirth<1) {
             return false;
-        }else if(monthOfBirth===2 && dayOfBirth>29){
+        }else if(monthOfBirth===2 && dateOfBirth>29){
             return false;
-        }else if (monthOfBirth===2 && dayOfBirth<1) {
+        }else if (monthOfBirth===2 && dateOfBirth<1) {
             return false;
         }else {
             return true;
@@ -44,3 +44,13 @@ function dayValidator(params) {
         return true;
     }
 }
+
+//variables for the validation of days of the week and months
+let monthTrue = monthValidator();
+let dayTrue = dayValidator();
+
+//The formula to determine the day one is born (from canvas)
+let dayOfWeekNumber = Math.floor((((Number(yearOfBirth.slice(0,2))/4)-2*Number(yearOfBirth.slice(0,2))-1)+
+            ((5*Number(yearOfBirth.slice(2,4))/4))+((26*(monthOfBirth+1)/10))+dateOfBirth)%7);
+ 
+//akan name arrays
