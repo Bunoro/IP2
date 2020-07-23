@@ -19,38 +19,34 @@
 
     <div class="container">
         <label>Input date of birth below</label>
-        <form class="myForm" onsubmit="return getAkanName()">
-            <label for="year-of-birth">
+        <form onSubmit="return compute(event)">
+            <label for="year">
                 year:
-                <input type="number" name="year-of-birth" id="year-input" placeholder="YYYY" value="required">
+                <input type="number" name="year" id="year" placeholder="YYYY" value="">
             </label>
     
-            <label for="month-of-birth">
+            <label for="month">
                 month:
-                <input type="number" name="month-of-birth" id="month-input" placeholder="MM" value="required">
+                <input type="number" name="month" id="month" placeholder="MM" value="">
             </label>
     
-            <label for="date-of-birth">
+            <label for="day">
                 date:
-                <input type="number" name="date-of-birth" id="date-input" placeholder="DD" value="required">
+                <input type="number" name="day" id="day" placeholder="DD" value="">
             </label>
             <br>
-            <label for="gender">
+            <label for="gender" id="gender">
                 male:
-                <input type="radio" name="gender" id="male-input" value="male" required>
+                <input type="radio" name="gender" id="male" value="male">
                 Female:
-                <input type="radio" name="gender" id="female-input" value="female" required>
+                <input type="radio" name="gender" id="female" value="female">
             </label>
             <br><br>
 
-            <input class="getAkan" type="submit" value="getAkanName">
+            <input type="submit" value="getAkanName">
     
         </form>
     
-        <form onsubmit="return clearInput()">
-            <input class="clear" type="submit" value="clearInput">
-    
-        </form>
     
 
     </div>
